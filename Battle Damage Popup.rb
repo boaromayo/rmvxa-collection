@@ -23,6 +23,7 @@ module BattleLuna
         :default    => "%s",        # SprintF for Default.
         :hp_dmg     => "-%s ",      # SprintF for HP damage.
         :hp_heal    => "+%s ",      # SprintF for HP healing.
+        :hp_weak_dmg=> "-%s ",      # SprintF for HP weakness damage (1.5x).
         :mp_dmg     => "-%s MP",    # SprintF for MP damage.
         :mp_heal    => "+%s MP",    # SprintF for MP healing.
         :tp_dmg     => "-%s TP",    # SprintF for MP damage.
@@ -49,7 +50,8 @@ module BattleLuna
         # Type      => [Red, Green, Blue, Size, Bold, Italic, Font],
         :default    => [255,   255,  255,   32, true,  false, Font.default_name],
         :hp_dmg     => [255,   255,  255,   32, true,  false, Font.default_name],
-        :hp_heal    => [255,   255,  255,   32, true,  false, Font.default_name],
+        :hp_heal    => [160,   255,  155,   32, true,  false, Font.default_name],
+        :hp_weak_dmg=> [255,   160,  155,   32, true,  false, Font.default_name],
         :mp_dmg     => [255,   255,  255,   32, true,  false, Font.default_name],
         :mp_heal    => [255,   255,  255,   32, true,  false, Font.default_name],
         :tp_dmg     => [255,   255,  255,   32, true,  false, Font.default_name],
@@ -63,10 +65,10 @@ module BattleLuna
         :add_state  => [255,   255,  255,   32, true,  false, Font.default_name],
         :rem_state  => [255,   255,  255,   32, true,  false, Font.default_name],
         :dur_state  => [255,   255,  255,   32, true,  false, Font.default_name],
-        :weakpoint  => [255,   255,  255,   32, true,  false, Font.default_name],
+        :weakpoint  => [255,   160,  155,   32, true,  false, Font.default_name],
         :resistant  => [255,   255,  255,   32, true,  false, Font.default_name],
         :immune     => [255,   255,  255,   32, true,  false, Font.default_name],
-        :absorbed   => [255,   255,  255,   32, true,  false, Font.default_name],
+        :absorbed   => [160,   255,  155,   32, true,  false, Font.default_name],
         :add_buff   => [255,   255,  255,   32, true,  false, Font.default_name],
         :add_debuff => [255,   255,  255,   32, true,  false, Font.default_name],
         :lvup       => [255,   255,  255,   20, false, false, Font.default_name],
@@ -78,6 +80,7 @@ module BattleLuna
         :default    => [:up, :wait],
         :hp_dmg     => [:jump_1, :jump_2, :wait],
         :hp_heal    => [:jump_1, :jump_2, :wait],
+        :hp_weak_dmg=> [:jump_1, :jump_2, :wait],
         :mp_dmg     => [:jump_1, :jump_2, :wait],
         :mp_heal    => [:jump_1, :jump_2, :wait],
         :tp_dmg     => [:jump_1, :jump_2, :wait],
